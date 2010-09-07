@@ -1,0 +1,1 @@
+Add minimum CPU/Hardware Requirements for binary builds
