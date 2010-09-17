@@ -1,0 +1,2 @@
+Including ProjectLogo and Publisher Logo into Coverpage and setting font
+
