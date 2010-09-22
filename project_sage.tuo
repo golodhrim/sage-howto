@@ -1,0 +1,40 @@
+%
+% loaded files: 4
+%
+% > c_sage-0 1
+% > env_sage 1
+% > prd_sage 1
+% > project_sage 1
+%
+% temporary files: 0
+%
+%
+% commands: 23
+%
+\thisissectionseparator{-}%
+\thisisutilityversion{2008.10.14}%
+\usedmapfile{=}{original-base}%
+\usedmapfile{=}{original-ams-base}%
+\usedmapfile{=}{original-public-lm}%
+\usedmapfile{=}{lm-ec}%
+\usedmapfile{=}{lm-math}%
+\usedmapfile{=}{lm-rm}%
+\usedmapfile{=}{original-ams-euler}%
+\initializevariable\usedoutputdriver{pdftex}%
+\mainreference{}{content}{1--0-0-0-0-0-0-0--ii}{3}{{0}{\headtext {content}}}%
+\mainreference{}{cha:requirements}{2--0-1-0-0-0-0-0--3}{4}{{1}{Requirements}}%
+\listentry{chapter}{1}{1}{Requirements}{2--0-1-0-0-0-0-0--3}{4}%
+\mainreference{}{index}{3--0-1-0-0-0-0-0--4}{5}{{A}{\headtext {index}}}%
+\listentry{chapter}{2}{A}{\headtext {index}}{3--0-1-0-0-0-0-0--4}{5}%
+\mainreference{}{pubs}{3--0-1-0-0-0-0-0--5}{6}{{A}{References}}%
+\initializevariable\usedcolorchannels{}%
+\initializevariable\currentstrategypass{1}%
+\initializevariable\totalnofpositions{0}%
+\initializevariable\totalnofMPgraphics{0}%
+\initializevariable\totalnofparbackgrounds{0}%
+\initializevariable\lastpage{7}%
+\initializevariable\lastpagenumber{6}%
+%
+% programs: 0
+%
+\endinput

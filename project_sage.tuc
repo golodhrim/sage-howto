@@ -1,0 +1,1535 @@
+-- version: 1.14
+-- file: project_sage
+-- format: cont-en
+-- stamp: 2010.09.16 10:46
+-- escape: [===[ ... ]===]
+
+job = job or { }
+job.variables = job.variables or { }
+job.variables.checksums = job.variables.checksums or { }
+job.variables.checksums={
+ new="22AF645D1859CB5CA6DA0C484F1F37EA",
+ old="149603E6C03516362A8DA23F624DB945",
+}
+job = job or { }
+job.variables = job.variables or { }
+job.variables.collected = job.variables.collected or { }
+job.variables.collected={
+ randomseed=0.5929547397387,
+ totalnofparbackgrounds=0,
+}
+job = job or { }
+job.passes = job.passes or { }
+job.passes.collected = job.passes.collected or { }
+job.passes.collected={
+ itemgroup={
+  { 2, "0" },
+ },
+}
+structures = structures or { }
+structures.specials = structures.specials or { }
+structures.specials.collected = structures.specials.collected or { }
+structures.specials.collected={
+}
+structures = structures or { }
+structures.counters = structures.counters or { }
+structures.counters.collected = structures.counters.collected or { }
+structures.counters.collected={
+ ["@@si"]={
+  { 0, 0 },
+ },
+ bem={
+  { 0, 0, 0, 0 },
+ },
+ bsp={
+  { 0, 0, 0, 0 },
+ },
+ corollary={
+  { 0, 0, 0, 0 },
+ },
+ defn={
+  { 0, 0, 0, 0 },
+ },
+ eig={
+  { 0, 0, 0, 0 },
+ },
+ endnote={
+  { 0, 0, 0, 0 },
+ },
+ figure={
+  { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+ },
+ folg={
+  { 0, 0, 0, 0 },
+ },
+ footnote={
+  { 0, 0, 0, 0 },
+ },
+ formula={
+  { 0, 0, 0, 0, 0, 0, 0 },
+ },
+ frage={
+  { 0, 0, 0, 0 },
+ },
+ graphic={
+  { 0, 0, 0, 0, 0, 0, 0 },
+ },
+ intermezzo={
+  { 0, 0, 0, 0, 0, 0, 0 },
+ },
+ ["itemgroup:itemize"]={
+  { 0, 0, 0, 0, 0, 2, 0, 0, 0, 0 },
+ },
+ lemma={
+  { 0, 0, 0, 0 },
+ },
+ ["ln:linenote"]={
+  { 0, 0, 0, 0 },
+ },
+ nota={
+  { 0, 0, 0, 0 },
+ },
+ prinzip={
+  { 0, 0, 0, 0 },
+ },
+ proof={
+  { 0, 0, 0, 0 },
+ },
+ realpage={
+  { 0, 16 },
+ },
+ satz={
+  { 0, 0, 0, 0 },
+ },
+ subpage={
+  { 0, 1 },
+ },
+ table={
+  { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+ },
+ usage={
+  { 0, 0, 0, 0 },
+ },
+ userpage={
+  { 0, 2, 2, 10 },
+ },
+ vignette={
+  { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+ },
+}
+structures = structures or { }
+structures.lists = structures.lists or { }
+structures.lists.collected = structures.lists.collected or { }
+structures.lists.collected={
+ {
+  metadata=3,
+  numberdata=2,
+  references={
+   block="frontpart",
+   internal=1,
+   realpage=5,
+   reference="content",
+   section=0,
+  },
+  titledata={
+   bookmark="content",
+   label="title",
+   title="\\headtext {content}",
+  },
+ },
+ {
+  metadata=6,
+  numberdata=5,
+  references={
+   block="bodypart",
+   internal=2,
+   realpage=7,
+   reference="cha:foreword",
+   section=1,
+  },
+  titledata={
+   label="chapter",
+   title="Foreword",
+  },
+ },
+ {
+  metadata=6,
+  numberdata=8,
+  references={
+   block="bodypart",
+   internal=3,
+   realpage=9,
+   reference="cha:requirements",
+   section=2,
+  },
+  titledata={
+   label="chapter",
+   title="Requirements",
+  },
+ },
+ {
+  metadata=11,
+  numberdata=10,
+  references={
+   block="bodypart",
+   internal=4,
+   realpage=9,
+   reference="sec:software",
+   section=3,
+  },
+  titledata={
+   label="section",
+   title="Software for installing form Source",
+  },
+ },
+ {
+  metadata=11,
+  numberdata=13,
+  references={
+   block="bodypart",
+   internal=5,
+   realpage=9,
+   reference="sec:hardware",
+   section=4,
+  },
+  titledata={
+   label="section",
+   title="Hardware",
+  },
+ },
+ {
+  metadata=6,
+  numberdata=14,
+  references={
+   block="appendix",
+   internal=6,
+   realpage=11,
+   reference="index",
+   section=5,
+  },
+  titledata={
+   bookmark="index",
+   label="chapter",
+   title="\\headtext {index}",
+  },
+ },
+ {
+  metadata=6,
+  numberdata=15,
+  references={
+   block="appendix",
+   internal=7,
+   realpage=13,
+   reference="pubs",
+   section=6,
+  },
+  titledata={
+   bookmark="pubs",
+   label="chapter",
+   title="\\headtext {pubs}",
+  },
+ },
+}
+structures = structures or { }
+structures.pages = structures.pages or { }
+structures.pages.collected = structures.pages.collected or { }
+structures.pages.collected={
+ {
+  block="bodypart",
+  number=1,
+  numberdata=16,
+  prefixdata=17,
+ },
+ {
+  block="bodypart",
+  number=1,
+  numberdata=16,
+  prefixdata=17,
+ },
+ {
+  block="frontpart",
+  number=1,
+  numberdata=16,
+  prefixdata=17,
+ },
+ {
+  block="frontpart",
+  number=2,
+  numberdata=16,
+  prefixdata=17,
+ },
+ {
+  block="frontpart",
+  number=1,
+  numberdata=18,
+  prefixdata=17,
+ },
+ {
+  block="frontpart",
+  number=2,
+  numberdata=18,
+  prefixdata=17,
+ },
+ {
+  block="bodypart",
+  number=1,
+  numberdata=16,
+  prefixdata=17,
+ },
+ {
+  block="bodypart",
+  number=2,
+  numberdata=16,
+  prefixdata=17,
+ },
+ {
+  block="bodypart",
+  number=3,
+  numberdata=16,
+  prefixdata=17,
+ },
+ {
+  block="bodypart",
+  number=4,
+  numberdata=16,
+  prefixdata=17,
+ },
+ {
+  block="appendix",
+  number=5,
+  numberdata=16,
+  prefixdata=17,
+ },
+ {
+  block="appendix",
+  number=6,
+  numberdata=16,
+  prefixdata=17,
+ },
+ {
+  block="appendix",
+  number=7,
+  numberdata=16,
+  prefixdata=17,
+ },
+ {
+  block="appendix",
+  number=8,
+  numberdata=16,
+  prefixdata=17,
+ },
+ {
+  block="appendix",
+  number=9,
+  numberdata=16,
+  prefixdata=17,
+ },
+ {
+  block="appendix",
+  number=10,
+  numberdata=16,
+  prefixdata=17,
+ },
+}
+structures = structures or { }
+structures.references = structures.references or { }
+structures.references.collected = structures.references.collected or { }
+structures.references.collected={
+}
+structures = structures or { }
+structures.registers = structures.registers or { }
+structures.registers.collected = structures.registers.collected or { }
+structures.registers.collected={
+}
+job = job or { }
+job.positions = job.positions or { }
+job.positions.collected = job.positions.collected or { }
+job.positions.collected={
+}
+job = job or { }
+job.objects = job.objects or { }
+job.objects.collected = job.objects.collected or { }
+job.objects.collected={
+}
+structures = structures or { }
+structures.synonyms = structures.synonyms or { }
+structures.synonyms.collected = structures.synonyms.collected or { }
+structures.synonyms.collected={
+ unit={
+  entries={
+   {
+    definition={
+     meaning="meter",
+     synonym="m",
+     tag="Meter",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="picometer",
+     synonym="\\Pico \\Meter ",
+     tag="pMeter",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="nanometer",
+     synonym="\\Nano \\Meter ",
+     tag="nMeter",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="micrometer",
+     synonym="\\Micro \\Meter ",
+     tag="uMeter",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="millimeter",
+     synonym="\\Milli \\Meter ",
+     tag="mMeter",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="centimeter",
+     synonym="\\Centi \\Meter ",
+     tag="cMeter",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="decimeter",
+     synonym="\\Deci \\Meter ",
+     tag="dMeter",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="hectometer",
+     synonym="\\Hecto \\Meter ",
+     tag="hMeter",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="kilometer",
+     synonym="\\Kilo \\Meter ",
+     tag="kMeter",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="liter",
+     synonym="l",
+     tag="Liter",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="milliliter",
+     synonym="\\Milli \\Liter ",
+     tag="mLiter",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="centiliter",
+     synonym="\\Centi \\Liter ",
+     tag="cLiter",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="deciliter",
+     synonym="\\Deci \\Liter ",
+     tag="dLiter",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="\\labeltext {u:sec}",
+     synonym="s",
+     tag="Sec",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="\\labeltext {u:fsec}",
+     synonym="\\Femto \\Sec ",
+     tag="fSec",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="\\labeltext {u:psec}",
+     synonym="\\Pico \\Sec ",
+     tag="pSec",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="\\labeltext {u:nsec}",
+     synonym="\\Nano \\Sec ",
+     tag="nSec",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="\\labeltext {u:usec}",
+     synonym="\\Micro \\Sec ",
+     tag="uSec",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="\\labeltext {u:msec}",
+     synonym="\\Milli \\Sec ",
+     tag="mSec",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="\\labeltext {u:year}",
+     synonym="\\ifSIunits a \\else j\\fi ",
+     tag="Year",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="\\labeltext {u:month}",
+     synonym="m",
+     tag="Month",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="\\labeltext {u:week}",
+     synonym="w",
+     tag="Week",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="\\labeltext {u:day}",
+     synonym="d",
+     tag="Day",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="\\labeltext {u:hour}",
+     synonym="\\ifSIunits h \\else u\\fi ",
+     tag="Hour",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="\\labeltext {u:min}",
+     synonym="min",
+     tag="Min",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="\\labeltext {u:rad}",
+     synonym="rad",
+     tag="Rad",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="\\labeltext {u:deg}",
+     synonym="{\\mathematics {^\\circ }}",
+     tag="Deg",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="Hertz",
+     synonym="Hz",
+     tag="Hertz",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="kilo Hertz",
+     synonym="\\Kilo \\Hertz ",
+     tag="kHertz",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="mega Hertz",
+     synonym="\\Mega \\Hertz ",
+     tag="MHertz",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="giga Hertz",
+     synonym="\\Giga \\Hertz ",
+     tag="GHertz",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="tera Hertz",
+     synonym="\\Tera \\Hertz ",
+     tag="THertz",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="milli Hertz",
+     synonym="\\Milli \\Hertz ",
+     tag="mHertz",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="\\labeltext {u:rps}",
+     synonym="RPS",
+     tag="RevPerSec",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="\\labeltext {u:rpm}",
+     synonym="RPM",
+     tag="RevPerMin",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="gram",
+     synonym="g",
+     tag="Gram",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="microgram",
+     synonym="\\Micro \\Gram ",
+     tag="uGram",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="milligram",
+     synonym="\\Milli \\Gram ",
+     tag="mGram",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="kilogram",
+     synonym="\\Kilo \\Gram ",
+     tag="kGram",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="\\labeltext {u:u}",
+     synonym="u",
+     tag="Atom",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="Newton",
+     synonym="N",
+     tag="Newton",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="kilo Newton",
+     synonym="\\Kilo \\Newton ",
+     tag="kNewton",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="Pascal",
+     synonym="Pa",
+     tag="Pascal",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="milli Pascal",
+     synonym="\\Milli \\Pascal ",
+     tag="mPascal",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="kilo Pascal",
+     synonym="\\Kilo \\Pascal ",
+     tag="kPascal",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="Joule",
+     synonym="J",
+     tag="Joule",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="milli Joule",
+     synonym="\\Milli \\Joule ",
+     tag="mJoule",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="kilo Joule",
+     synonym="\\Kilo \\Joule ",
+     tag="kJoule",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="mega Joule",
+     synonym="\\Mega \\Joule ",
+     tag="MJoule",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="giga Joule",
+     synonym="\\Giga \\Joule ",
+     tag="GJoule",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="Watt",
+     synonym="W",
+     tag="Watt",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="milli Watt",
+     synonym="\\Milli \\Watt ",
+     tag="mWatt",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="kilo Watt",
+     synonym="\\Kilo \\Watt ",
+     tag="kWatt",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="mega Watt",
+     synonym="\\Mega \\Watt ",
+     tag="MWatt",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="giga Watt",
+     synonym="\\Giga \\Watt ",
+     tag="GWatt",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="tera Watt",
+     synonym="\\Tera \\Watt ",
+     tag="TWatt",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="Celsius",
+     synonym="C",
+     tag="Celsius",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="Kelvin",
+     synonym="K",
+     tag="Kelvin",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="Fahrenheit",
+     synonym="F",
+     tag="Fahrenheit",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="mol",
+     synonym="mol",
+     tag="Mol",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="millimol",
+     synonym="\\Milli \\Mol ",
+     tag="mMol",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="kilomol",
+     synonym="\\Kilo \\Mol ",
+     tag="kMol",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="molair (\\Mol \\Per \\Liter )",
+     synonym="M",
+     tag="Molair",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="equivalent",
+     synonym="eq",
+     tag="Equivalent",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="milli equivalent",
+     synonym="\\Milli \\Equivalent ",
+     tag="mEquivalent",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="Farad",
+     synonym="F",
+     tag="Farad",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="pico Farad",
+     synonym="\\Pico \\Farad ",
+     tag="pFarad",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="nano Farad",
+     synonym="\\Nano \\Farad ",
+     tag="nFarad",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="micro Farad",
+     synonym="\\Micro \\Farad ",
+     tag="uFarad",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="milli Farad",
+     synonym="\\Milli \\Farad ",
+     tag="mFarad",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="Ohm",
+     synonym="\\Omega ",
+     tag="Ohm",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="kilo Ohm",
+     synonym="\\Kilo \\Ohm ",
+     tag="kOhm",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="Siemens",
+     synonym="S",
+     tag="Siemens",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="Amp\\`ere",
+     synonym="A",
+     tag="Ampere",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="milli Amp\\`ere",
+     synonym="\\Milli \\Ampere ",
+     tag="mAmpere",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="Coulomb",
+     synonym="C",
+     tag="Coulomb",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="Volt",
+     synonym="V",
+     tag="Volt",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="milli Volt",
+     synonym="\\Milli \\Volt ",
+     tag="mVolt",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="kilo Volt",
+     synonym="\\Kilo \\Volt ",
+     tag="kVolt",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="electronvolt",
+     synonym="eV",
+     tag="eVolt",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="kilo electronvolt",
+     synonym="\\Kilo \\eVolt ",
+     tag="keVolt",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="mega electronvolt",
+     synonym="\\Mega \\eVolt ",
+     tag="MeVolt",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="Tesla",
+     synonym="T",
+     tag="Tesla",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="\\labeltext {u:vac}",
+     synonym="V_{\\xbox {ac}}",
+     tag="VoltAC",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="\\labeltext {u:vdc}",
+     synonym="V_{\\xbox {dc}}",
+     tag="VoltDC",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="Bit",
+     synonym="bit",
+     tag="Bit",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="Baud (Bit/s)",
+     synonym="Bd",
+     tag="Baud",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="Byte",
+     synonym="B",
+     tag="Byte",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="kilo Byte",
+     synonym="\\Kilo \\Byte ",
+     tag="kByte",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="mega Byte",
+     synonym="\\Mega \\Byte ",
+     tag="MByte",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="giga Byte",
+     synonym="\\Giga \\Byte ",
+     tag="GByte",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="tera Byte",
+     synonym="\\Tera \\Byte ",
+     tag="TByte",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="Bequerel",
+     synonym="Bq",
+     tag="Bequerel",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="Bequerel",
+     synonym="\\Mega \\Bequerel ",
+     tag="MBequerel",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="Sievert",
+     synonym="Sv",
+     tag="Sievert",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="milli Sievert",
+     synonym="\\Milli \\Sievert ",
+     tag="mSievert",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="Candela",
+     synonym="cd",
+     tag="Candela",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="Bell",
+     synonym="B",
+     tag="Bell",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="decibel",
+     synonym="\\Deci \\Bell ",
+     tag="dBell",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="\\labeltext {u:at}",
+     synonym="at",
+     tag="At",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="\\labeltext {u:atm}",
+     synonym="atm",
+     tag="Atm",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="bar (100 \\Kilo \\Pascal )",
+     synonym="bar",
+     tag="Bar",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="electronvolt",
+     synonym="eV",
+     tag="EVolt",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="\\labeltext {u:ft}",
+     synonym="ft",
+     tag="Foot",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="inch",
+     synonym="inch",
+     tag="Inch",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="\\labeltext {u:cal}",
+     synonym="cal",
+     tag="Cal",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="\\labeltext {u:f}",
+     synonym="f",
+     tag="Force",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="\\labeltext {u:kcal}",
+     synonym="\\Kilo \\Cal ",
+     tag="kCal",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="lux",
+     synonym="lux",
+     tag="Lux",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="percent",
+     synonym="\\xPercent ",
+     tag="Percent",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="promille",
+     synonym="\\xPromille ",
+     tag="Permille",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="promille",
+     synonym="\\xPromille ",
+     tag="Promille",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="Gray",
+     synonym="Gr",
+     tag="Gray",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="Weber",
+     synonym="Wb",
+     tag="Weber",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="Henry",
+     synonym="H",
+     tag="Henry",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="Sterant",
+     synonym="sr",
+     tag="Sterant",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="\\Aring ngstr\\\"om",
+     synonym="\\hbox {\\Aring }",
+     tag="Angstrom",
+     used=false,
+    },
+    metadata=19,
+   },
+   {
+    definition={
+     meaning="Gauss",
+     synonym="G",
+     tag="Gauss",
+     used=false,
+    },
+    metadata=19,
+   },
+  },
+  metadata=20,
+ },
+}
+structures = structures or { }
+structures.blocks = structures.blocks or { }
+structures.blocks.collected = structures.blocks.collected or { }
+structures.blocks.collected={
+}
+job = job or { }
+job.files = job.files or { }
+job.files.collected = job.files.collected or { }
+job.files.collected={
+}
+job.packed={
+ index={
+  { 0, 0 },
+  {
+   block="frontpart",
+   hidenumber=true,
+   numbers=1,
+   set="all",
+  },
+  {
+   catcodes=9,
+   coding="tex",
+   kind="section",
+   name="title",
+   nolist=true,
+  },
+  { 0, 1 },
+  {
+   block="bodypart",
+   numbers=4,
+   set="all",
+  },
+  {
+   catcodes=9,
+   coding="tex",
+   increment="yes",
+   kind="section",
+   name="chapter",
+  },
+  { 0, 2 },
+  {
+   block="bodypart",
+   numbers=7,
+   set="all",
+  },
+  { 0, 2, 1 },
+  {
+   block="bodypart",
+   numbers=9,
+   set="all",
+  },
+  {
+   catcodes=9,
+   coding="tex",
+   increment="yes",
+   kind="section",
+   name="section",
+  },
+  { 0, 2, 2 },
+  {
+   block="bodypart",
+   numbers=12,
+   set="all",
+  },
+  {
+   block="appendix",
+   numbers=4,
+   set="all",
+  },
+  {
+   block="appendix",
+   numbers=7,
+   set="all",
+  },
+  {
+   conversionset="pagenumber",
+  },
+  {
+   connector="\\endash ",
+   prefix="no",
+   set="part",
+  },
+  {
+   conversion="romannumerals",
+   conversionset="pagenumber",
+  },
+  {
+   catcodes=8,
+   coding="tex",
+  },
+  {
+   class="unit",
+   kind="synonym",
+   language="en",
+   sorted=false,
+  },
+ },
+ keys={
+  directives=true,
+  metadata=true,
+  numberdata=true,
+  numbers=true,
+  pagedata=true,
+  prefixdata=true,
+  processors=true,
+  sectiondata=true,
+  specification=true,
+ },
+ version=1.01,
+}

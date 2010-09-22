@@ -1,0 +1,14 @@
+% project_sage.top
+\unprotect
+\def\MPOSTformatswitch{-progname=metafun -mem=}
+\setupsystem[\c!n=2,\c!m=3]
+\setupsystem[\c!method=2]
+\setupsystem[\c!type=linux]
+\setupsystem[\c!random=820]
+\setupsystem[inputfile=project_sage.tex]
+\startsetups *runtime:options
+\setupoutput[pdftex]
+\stopsetups
+\startsetups *runtime:modules
+\stopsetups
+\protect \endinput

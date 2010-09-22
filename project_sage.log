@@ -1,0 +1,183 @@
+(project_sage.tex
+jobcontrol      > resuming randomizer with 0.5929547397387
+
+ConTeXt  ver: 2010.09.16 10:46 MKIV  fmt: 2010.9.17  int: english/english
+
+system          : cont-new loaded
+(/opt/context-minimals/tex/texmf-context/tex/context/base/cont-new.tex
+systems         : beware: some patches loaded from cont-new.tex
+(/opt/context-minimals/tex/texmf-context/tex/context/base/cont-new.mkiv))
+system          : cont-fil loaded
+(/opt/context-minimals/tex/texmf-context/tex/context/base/cont-fil.tex
+loading         : ConTeXt File Synonyms
+)
+system          : cont-sys loaded
+(/opt/context-minimals/tex/texmf-context/tex/context/base/cont-sys.tex (/opt/context-minimals/tex/texmf-context/tex/context/base/type-def.mkiv) (/opt/context-minimals/tex/texmf-context/tex/context/base/type-lua.mkiv) (/opt/context-minimals/tex/texmf-context/tex/context/base/type-siz.mkiv) (/opt/context-minimals/tex/texmf-context/tex/context/base/type-otf.mkiv))
+system          : project_sage.top loaded
+%
+%	begin of optionfile
+%
+%	% runtime options files (command line driven)
+%	\unprotect
+%	% feedback and basic job control
+%	% handy for special styles
+%	\startluacode
+%	document = document or { }
+%	document.arguments={
+%	}
+%	document.files={
+%	 "project_sage.tex",
+%	}
+%	\stopluacode
+%	% process info
+%	\setupsystem[inputfile=project_sage.tex]
+%	\setupsystem[\c!n=1,\c!m=1]
+%	% modes
+%	% options (not that important)
+%	\startsetups *runtime:options
+%	\setupoutput[pdftex]
+%	\stopsetups
+%	% styles and modules
+%	\startsetups *runtime:modules
+%	\stopsetups
+%	% done
+%	\protect \endinput
+%
+%	end of optionfile
+%
+(project_sage.top)
+fonts           : preloading latin modern fonts
+{/opt/context-minimals/tex/texmf/fonts/map/dvips/lm/lm-math.map}{/opt/context-minimals/tex/texmf/fonts/map/dvips/lm/lm-rm.map}{/opt/context-minimals/tex/texmf-context/fonts/map/pdftex/context/mkiv-base.map}
+bodyfont        : 12pt rm is loaded
+language        : language en is active
+publications    : loading formatting style from bxml-apa
+(/opt/context-minimals/tex/texmf-context/tex/context/base/bxml-apa.mkiv)
+systems         : begin file project_sage.tex at line 1
+systems         : begin file env_sage at line 2
+(env_sage.tex
+runsystem(sh ./vc)...executed.
+
+ (vc.tex)
+system          : module greek loaded
+(/opt/context-minimals/tex/texmf-context/tex/context/base/s-grk-00.tex
+check           : missing or ungrouped '=' after 'default' in line 18 (@@ts)
+check           : missing or ungrouped '=' after 'default' in line 18 (@@ts)
+check           : missing or ungrouped '=' after 'default' in line 18 (@@ts)
+check           : missing or ungrouped '=' after 'default' in line 18 (@@ts)
+{/opt/context-minimals/tex/texmf-context/fonts/map/pdftex/context/mkiv-tx.map}{/opt/context-minimals/tex/texmf-context/fonts/map/pdftex/context/mkiv-px.map}{/opt/context-minimals/tex/texmf/fonts/map/dvips/antt/antt-rm.map}{/opt/context-minimals/tex/texmf/fonts/map/dvips/antt/antt-mi.map}{/opt/context-minimals/tex/texmf/fonts/map/dvips/antt/antt-sy.map}{/opt/context-minimals/tex/texmf/fonts/map/dvips/antt/antt-ex.map}{/opt/context-minimals/tex/texmf/fonts/map/dvips/iwona/iwona-rm.map}{/opt/context-minimals/tex/texmf/fonts/map/dvips/iwona/iwona-mi.map}{/opt/context-minimals/tex/texmf/fonts/map/dvips/iwona/iwona-sy.map}{/opt/context-minimals/tex/texmf/fonts/map/dvips/iwona/iwona-ex.map})
+system          : module units loaded
+(/opt/context-minimals/tex/texmf-context/tex/context/base/m-units.tex)
+system          : module gnuplot loaded
+(/opt/context-minimals/tex/texmf-context/tex/context/third/gnuplot/t-gnuplot.tex
+loading         : Gnuplot module
+)
+system          : module newmat loaded
+(/opt/context-minimals/tex/texmf-context/tex/context/base/m-newmat.tex)
+system          : module amsl not found
+symbols         : loading symbolset was
+(/opt/context-minimals/tex/texmf-context/tex/context/base/symb-was.tex{/opt/context-minimals/tex/texmf-context/fonts/map/pdftex/context/original-wasy.map})
+system          : module vim loaded
+(t-vim.tex
+system          : module filter loaded
+(t-filter.tex)
+color           : system hex is loaded
+(/opt/context-minimals/tex/texmf-context/tex/context/base/colo-hex.tex (/opt/context-minimals/tex/texmf-context/tex/context/base/colo-hex.mkiv)))
+check           : missing or ungrouped '=' after 'hex' in line 18 (@@cl)
+color           : rgb color space is not supported
+interaction     : active
+system          : module tikz loaded
+(/opt/context-minimals/tex/texmf-context/tex/context/pgf/frontendlayer/t-tikz.tex (/opt/context-minimals/tex/texmf-context/tex/context/pgf/basiclayer/t-pgf.tex (/opt/context-minimals/tex/texmf-context/tex/context/pgf/basiclayer/t-pgfcor.tex (/opt/context-minimals/tex/texmf-context/tex/context/pgf/systemlayer/t-pgfsys.tex (/opt/context-minimals/tex/texmf-context/tex/context/pgf/utilities/t-pgfrcs.tex (/opt/context-minimals/tex/texmf-context/tex/context/pgf/utilities/t-pgfmod.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/utilities/pgfutil-common.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/utilities/pgfutil-context.def) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/utilities/pgfrcs.code.tex)) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/systemlayer/pgfsys.code.tex (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/utilities/pgfkeys.code.tex (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex)) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/systemlayer/pgf.cfg) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/systemlayer/pgfsys-pdftex.def (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def)) (project_sage.pgf)) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex)) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/basiclayer/pgfcore.code.tex (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/math/pgfmath.code.tex (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/math/pgfmathcalc.code.tex (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/math/pgfmathutil.code.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/math/pgfmathparser.code.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/math/pgfmathfunctions.code.tex (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex))) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/math/pgfmathfloat.code.tex)) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/basiclayer/pgfcorequick.code.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex))) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/modules/pgfmoduleshapes.code.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/modules/pgfmoduleplot.code.tex)) (/opt/context-minimals/tex/texmf-context/tex/context/pgf/utilities/t-pgffor.tex (/opt/context-minimals/tex/texmf-context/tex/context/pgf/utilities/t-pgfrcs.tex) (/opt/context-minimals/tex/texmf-context/tex/context/pgf/utilities/t-pgfkey.tex (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/utilities/pgffor.code.tex)) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/modules/pgfmodulematrix.code.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex)))
+system          : module pgfplots loaded
+(/opt/context-minimals/tex/texmf-context/tex/context/third/pgfplots/t-pgfplots.tex
+system          : module tikz already loaded
+(/opt/context-minimals/tex/texmf-context/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryplotmarks.code.tex (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex)) (/opt/context-minimals/tex/texmf-context/tex/generic/pgfplots/pgfplots.code.tex (/opt/context-minimals/tex/texmf-context/tex/generic/pgfplots/pgfplotscore.code.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_loader.code.tex (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)) (/opt/context-minimals/tex/texmf-context/tex/generic/pgfplots/util/pgfplotsutil.code.tex (/opt/context-minimals/tex/texmf-context/tex/generic/pgfplots/liststructure/pgfplotsliststructure.code.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgfplots/liststructure/pgfplotsliststructureext.code.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgfplots/liststructure/pgfplotsarray.code.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgfplots/numtable/pgfplotstable.code.tex (/opt/context-minimals/tex/texmf-context/tex/generic/pgfplots/numtable/pgfplotstable.coltype.code.tex)) (/opt/context-minimals/tex/texmf-context/tex/generic/pgfplots/liststructure/pgfplotsdeque.code.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgfplots/util/pgfplotsbinary.code.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgfplots/libs/pgflibrarysurfshading.code.tex (/opt/context-minimals/tex/texmf-context/tex/generic/pgfplots/sys/pgflibrarysurfshading.pgfsys-pdftex.def))) (/opt/context-minimals/tex/texmf-context/tex/generic/pgfplots/util/pgfplotscolormap.code.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgfplots/pgfplots.stackedplots.code.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgfplots/pgfplotscoordprocessing.code.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgfplots/pgfplotsticks.code.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/modules/pgfmoduledecorations.code.tex)) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex)) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex)))) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarythrough.code.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybackgrounds.code.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarymatrix.code.tex) (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex (/opt/context-minimals/tex/texmf-context/tex/generic/pgf/libraries/pgflibraryarrows.code.tex))
+system          : module bib loaded
+(/opt/context-minimals/tex/texmf-context/tex/context/base/m-obsolete.tex
+systems         : skipping obsolete module
+)
+system          : module bibltx not found
+publications    : wrote a new auxiliary file cont-en.aux
+(urls.tex))
+systems         : end file env_sage at line 2
+mplib           : initializing instance 'metafun' using format 'metafun'
+mplib           : loading 'metafun.mp' (experimental metapost version two)
+backends        > using xmp file '/opt/context-minimals/tex/texmf-context/tex/context/base/lpdf-pdx.xml'
+ <logo/frog-and-owl.pdf> <logo/sage-logo.pdf>
+pages           > flushing realpage 1, userpage 1, subpage 1
+pages           > flushing realpage 2, userpage 1
+pages           > flushing realpage 3, userpage 1
+pages           > flushing realpage 4, userpage 2
+structure       : begin of sectionblock frontpart
+structure       : title @ level 2 : 0.0 -> \headtext {content}
+structure       : end of sectionblock frontpart
+pages           > flushing realpage 5, userpage 1
+pages           > flushing realpage 6, userpage 2
+structure       : begin of sectionblock bodypart
+systems         : begin file prd_sage at line 66
+(prd_sage.tex
+systems         : begin file c_sage-0 at line 4
+(c_sage-0.tex
+structure       : chapter @ level 2 : 0.1 -> Foreword
+
+Overfull \hbox (2.35277pt too wide) in paragraph at lines 7--8
+\*modern12ptrmbf* info@scholz-net.org \*modern12ptrmtf* or sage-sup-port at \*modern12ptrmbf* http://groups.google.com/group/sage-
+
+\hbox(9.0+3.0)x435.32726, glue set - 1.0, direction TLT
+.\*modern12ptrmbf* i
+.\*modern12ptrmbf* n
+.\*modern12ptrmbf* f
+.\*modern12ptrmbf* o
+.\*modern12ptrmbf* @
+.etc.
+
+pages           > flushing realpage 7, userpage 1
+pages           > flushing realpage 8, userpage 2
+structure       : chapter @ level 2 : 0.2 -> Requirements
+structure       : section @ level 3 : 0.2.1 -> Software for installing form Source
+structure       : section @ level 3 : 0.2.2 -> Hardware
+)
+systems         : end file c_sage-0 at line 4
+)
+systems         : end file prd_sage at line 66
+structure       : end of sectionblock bodypart
+pages           > flushing realpage 9, userpage 3
+pages           > flushing realpage 10, userpage 4
+structure       : begin of sectionblock appendix
+structure       : chapter @ level 2 : 0.1 -> \headtext {index}
+todo            : erase note backup
+todo            : save note data
+todo            : restore note data
+pages           > flushing realpage 11, userpage 5
+pages           > flushing realpage 12, userpage 6
+structure       : chapter @ level 2 : 0.2 -> \headtext {pubs}
+structure       : end of sectionblock appendix
+pages           > flushing realpage 13, userpage 7
+pages           > flushing realpage 14, userpage 8
+pages           > flushing realpage 15, userpage 9
+pages           > flushing realpage 16, userpage 10
+systems         : end file project_sage.tex at line 80
+ )</opt/context-minimals/tex/texmf/fonts/opentype/public/lm/lmroman12-bold.otf></opt/context-minimals/tex/texmf/fonts/opentype/public/lm/lmroman8-regular.otf></opt/context-minimals/tex/texmf/fonts/opentype/public/lm/lmroman12-regular.otf>
+mkiv lua stats : used config file          - /opt/context-minimals/tex/texmf/web2c/texmfcnf.lua
+mkiv lua stats : used cache path           - /home/golodhrim/.context-minimals/texmf-cache/luatex-cache/context/c63c0436d02b6f578869dabb6fcfef99
+mkiv lua stats : input load time           - 0.025 seconds
+mkiv lua stats : stored bytecode data      - 238 modules, 55 tables, 293 chunks
+mkiv lua stats : loaded tex modules        - 11 requested, 9 found (*-filter *-gnuplot *-grk-00 *-newmat *-obsolete *-pgfplots *-tikz *-units *-vim), 2 missing (*-amsl *-bibltx)
+mkiv lua stats : cleaned up reserved nodes - 42 nodes, 10 lists of 432
+mkiv lua stats : node memory usage         - 20 glue_spec
+mkiv lua stats : node list callback tasks  - 6 unique task lists, 5 instances (re)created, 6021 calls
+mkiv lua stats : used backend              - pdf (backend for directly generating pdf output)
+mkiv lua stats : loaded patterns           - en::2
+mkiv lua stats : callbacks                 - direct: 7443, indirect: 66168, total: 73611
+mkiv lua stats : lxml preparation time     - 0.000 seconds, 0 nodes, 15 lpath calls, 0 cached calls
+mkiv lua stats : interactive elements      - 10 references, 7 destinations
+mkiv lua stats : result saved in file      - project_sage.pdf
+mkiv lua stats : loaded fonts              - 34 files: stmary10.afm lmmono12-regular.otf lmmono8-regular.otf lmmono9-regular.otf lmroman12-bold.otf lmroman12-regular.otf lmroman7-bold.otf lmroman7-regular.otf lmroman8-regular.otf lmroman9-bold.otf lmroman9-regular.otf lmsans12-regular.otf lmsans8-regular.otf lmsans9-regular.otf eufb10.tfm eufb7.tfm eufm10.tfm eufm7.tfm msam10.tfm msam7.tfm msbm10.tfm msbm7.tfm lmex10.tfm lmmi12.tfm lmmi7.tfm lmmi9.tfm lmmib10.tfm lmmib7.tfm lmsy10.tfm lmsy7.tfm lmsy9.tfm rm-lmr12.tfm rm-lmr7.tfm rm-lmr9.tfm
+mkiv lua stats : fonts load time           - 0.364 seconds 
+mkiv lua stats : metapost processing time  - 0.031 seconds, loading: 0.068 seconds, execution: 0.029 seconds, n: 2
+mkiv lua stats : graphics processing time  - 0.005 seconds including tex, 2 processed images
+mkiv lua stats : pdf annotations           - 10 embedded, 10 unique
+mkiv lua stats : luatex banner             - this is luatex, version beta-0.63.0-2010090921
+mkiv lua stats : control sequences         - 60902 of 165536
+mkiv lua stats : current memory usage      - 55 MB (ctx: 57 MB)
+mkiv lua stats : runtime                   - 5.524 seconds, 15 processed pages, 16 shipped pages, 2.896 pages/second
+

@@ -1,0 +1,331 @@
+\startenvironment env_sage
+
+\enableregime[utf]
+
+\immediate\write18{sh ./vc} 
+\input vc.tex
+
+\setuplanguage[deo][leftquote=\uperleftsinglesixquote,rightquote=\uperrightsixquote,leftquotation=\leftguillemot,rightquotation=\rightguillemot]
+
+\usemodule[greek]
+\usemodule[units]
+\usemodule[gnuplot]
+\usemodule[newmat]
+\usemodule[amsl]
+\usesymbols[was]
+\usemodule[vim]
+
+\setupcolors[rgb=no,cmyk=yes,hex,spot=yes,state=start,overprint=yes]
+\setupinteraction[state=start]
+
+\usemodule[tikz]
+\usemodule[pgfplots]
+\usetikzlibrary[calc,through,backgrounds,matrix,arrows]
+
+\usemodule[bib]
+\usemodule[bibltx]
+%\setuppublications[alternative=apa]
+\setuppublications[state=start,refcommand=authoryears]
+\setupbibtex[database=analysis]
+\setupcite[authoryears][compress=no,left=,right=]
+%\setupcite[authoryears][left=,right=]
+
+\setuppapersize[A4][A4]
+
+\setuppagenumbering[alternative=doublesided,	
+			location={footer,marginedge},
+			way=bytext, sectionnumber=yes, partnumber=yes]
+
+\setuplayout[location=middle,
+	topspace=3cm,
+	header=14pt,
+	headerdistance=10pt,
+	width=middle,
+	cutspace=4.5cm,
+	rightmargindistance=0.4cm,
+	leftmargindistance=0.2cm,
+	backspace=1.2cm,
+	height=fit,
+	rightmargin=4cm,
+	leftmargin=1cm,
+	bottomspace=1cm,
+	footer=0.8cm,
+	setup=strict]
+% all setups...
+
+%\showgrid
+%\showframe
+%\showsetups
+%\showlayout
+
+\setupheadertexts[][chapter][part][]
+\setupfootertexts[][{\startcolor[grey]\tfxx Revision: \VCRevision ; Author: \VCAuthor ; Date: \VCDateISO\stopcolor}][{\startcolor[grey]\tfxx Revision: \VCRevision ; Author: \VCAuthor ; Date: \VCDateISO\stopcolor}][]
+\setupbackgrounds[header][text][frame=off,bottomframe=on]
+\setuptolerance[{horizontal, verytolerant},{vertical, verystrict}]
+\clubpenalty=8000		% no clubs / keine Schusterjungen
+\widowpenalty=8000		% no wi\colordows / keine Hurenkinder
+\tolerance=1750		% line breaking tolerance (ca. 500--3000)
+\emergencystretch=10 pt	% additional stretching space per line
+\setupwhitespace[medium]
+\setupfootnotes[conversion=set 2, way=bypage]
+
+\definepagebreak[chapter][yes,footer,right]
+
+\def\MyChapterCommand#1#2%
+	{\framed[frame=off,bottomframe=on,topframe=on]
+		{\vbox{\headtext{chapter} #1\blank#2}}
+	}
+
+\setuphead[chapter][command=\MyChapterCommand,resetnumber=no]
+\setupheadtext[chapter=Kapitel]
+
+\setupsection[section][previousnumber=no,number=yes]
+
+\def\MySectionCommand#1#2%
+	{§ #1 - #2}
+\setuphead[section][command=\MySectionCommand]
+
+\def\MySubjectCommand#1#2%
+	{#1#2}
+\setuphead[subject][command=\MySubjectCommand]
+
+\setuphead[subsection][number=yes,style=\ss]
+\def\MySubSubSectionCommand#1#2%
+	{#1 #2}
+\setuphead[subsubsection][command=\MySubSubSectionCommand,style=slanted,number=yes,before={\blank[big]}, after=\nowhitespace]
+
+\setupfloats[spaceafter=3*medium]
+
+\setuptables[bodyfont=small]
+\setupcaption[table][style={\ssx\setupinterlinespace[line=2.5ex]},align=left]
+
+\setupfloat[table][criterium=0.5\textwidth,default=inner]
+\setupcaption[figure][style={\ssx\setupinterlinespace[line=2.5ex]},align=left]
+
+\definefloat[Bigfigure][Bigfigures][figure]
+\setupfloat[Bigfigure][location=inner]
+
+\definefloat[Bigtable][Bigtables][table]
+\setupfloat[Bigtable][location=inner]
+
+\definefloat[vignette][figure]
+\setupfloat[vignette][leftmargindistance=-\outermargintotal,rightmargindistance=-outermargintotal,default={outer,none,low}]
+
+\setupinmargin[align=right,style=\ss\tfx\setupinterlinespace]
+
+\setupitemize[align=right]
+
+\startsectionblockenvironment[appendix]
+
+\setuptabulate[align=right,split=yes]
+
+\definepagebreak[chapter][yes,footer,right]
+\setuphead[chapter][bodypartconversion=Character,page=chapter]
+\setuphead[section][number=yes]
+\setuphead[subsection][number=yes]
+\setuphead[subsubsection][number=yes]
+\definefloat[BigFramedFigure][BigFramedFigures][figure]
+\setupfloat[BigFramedFigure][location=inner,frame=on,offset=2pt]
+\definefloat[FramedFigure][FramedFigures][figure]
+\setupfloat[FramedFigure][frame=on,offset=2pt]
+\stopsectionblockenvironment
+
+\setupregister[index][imp][pagestyle=bold]
+\setupcombinedlist[content][level=3,alternative=c]
+\setuplist[chapter][style=bold]
+
+\definestructureconversionset[frontpart:pagenumber][][romannumerals]
+\definestructureconversionset[bodypart:pagenumber] [][numbers]
+
+\setuplist[chapter][pageconversionset=pagenumber]
+
+\startstructureblockenvironment[frontpart]
+\setupuserpagenumber[numberconversion=romannumerals]
+\setuppagenumber[number=1]
+\stopstructureblockenvironment
+
+\startstructureblockenvironment[bodypart]
+\setuppagenumber[number=1]
+\stopstructureblockenvironment
+
+%% Descriptionvariablen
+%
+\definedescription[descr][headstyle=bold, style=normal, location=hanging, width=fit, margin=1cm]
+
+
+%% Umgebungsvariablen
+%
+\defineenumeration[bem][text={Bemerkung }, location=serried, width=fit, identing=first, distance=1em]
+\defineenumeration[frage][text={\underbar{Frage:} }, location=serried, width=fit, identing=first, distance=0.5em]
+\setupnumber[frage][number=no]
+\defineenumeration[proof][text={\bs Beweis }, location=serried, width=fit, ident=yes, distance=1em, way=bytext, closesymbol=\QED]
+\setupnumber[proof][number=no]
+\defineenumeration[satz][text={\bf Satz }, location=serried, width=fit, identing=first, distance=1em]
+\defineenumeration[bsp][text={Beispiel }, location=serried, width=fit, identing=first, distance=0.5em]
+\setupnumber[bsp][number=no]
+\defineenumeration[defn][text={Definition }, location=serried, width=fit, identing=first, distance=1em]
+\defineenumeration[lemma][text={Lemma }, location=serried, width=fit, identing=first, distance=1em]
+\defineenumeration[corollary][text={Corollary }, location=serried, width=fit, identing=first, distance=1em]
+\defineenumeration[nota][text={Notation }, location=serried, width=fit, identing=first, distance=1em]
+\setupnumber[nota][number=no]
+\defineenumeration[usage][text={Anwendung }, location=serried, width=fit, identing=first, distance=1em]
+\setupnumber[usage][number=no]
+\defineenumeration[prinzip][text={Prinzip }, location=serried, width=fit, identing=first, distance=1em]
+\setupnumber[prinzip][number=no]
+\defineenumeration[eig][text={Eigenschaften }, location=serried, width=fit, identing=first, distance=1em]
+\setupnumber[eig][number=no]
+\defineenumeration[folg][text={Folgerung }, location=serried, width=fit, identing=first, distance=1em]
+\setupnumber[folg][number=no]
+
+%% Code Highligthing with vim
+%
+\definevimtyping[SAGE][syntax=python,alternative=pscolor]
+
+%% Mathematische Mengen
+%
+\def\C{\complexes}
+\def\R{\reals}
+\def\Q{\rationals}
+\def\Z{\integers}
+\def\N{\naturalnumbers}
+\def\P{\primes}
+% Weitere Doppelstroke Zeichen mit \def\<TYPE>{\blackboard{<TYPE>}} definieren
+\def\F{\blackboard{F}}
+\def\Fam{{\cal F}}
+\def\O{{\cal O}}
+
+%% Hilfreiche Operatoren
+%
+\def\stackrelo#1#2{\mathrel{\mathop{#1}\limits^{\small #2}}}
+\def\stackrelu#1#2{\mathrel{\mathop{#1}\limits^{\small #2}}}
+
+%% sonstige mathem. Operatoren
+%
+\def\abs#1{\left| #1 \right|}
+\def\norm#1{\left|\left| #1 \right|\right|}
+\def\ord{{\rm ord}}
+\def\Log{{\rm Log}}
+\def\ZZ{$Z\mkern-16mu_{\textstyle Z}\mkern5mu$}
+\def\Res{{\rm Res}}
+\def\div{{\rm div}}
+\def\dim{{\rm dim}}
+\def\core{{\rm kern}}
+\def\bild{{\rm bild}}
+\def\grad{{\rm grad}}
+
+%% mathem. Symbole
+%
+\def\lightning{\symbol[wasy general][lightning]}
+\def\iddots{\mirror{\ddots}}
+%% URLS including
+%
+\input urls.tex
+
+%% Warnungssymbol
+%
+\def\warning{\inmargin{\reuseMPgraphic{achtung}}\underbar{Vorsicht:}}
+\startreusableMPgraphic{achtung}
+a = sqrt(400-25)+5;
+path d, s, l, p;
+d := ( (0,5)--(20,5)--(10,a)--cycle )  ;
+s := ( (10,5)--(10,0) ) ;
+l := ( (10,18)--(10,11) ) ;
+p := fullcircle scaled (0.5) shifted (10,9) ; 
+draw p;
+draw l;
+draw s;
+draw d withcolor .625 red;
+\stopreusableMPgraphic
+
+\def\notice{\inmargin{\reuseMPgraphic{hinweis}}\underbar{Hinweis: }}
+\startreusableMPgraphic{hinweis}
+path l, p, b;
+b:= fullcircle scaled (0) shifted (0,0);
+l:= ( (20,10)--(20,3) );
+p:= fullcircle scaled (0.5) shifted (20.25,1) ;
+draw b withcolor white;
+draw p withcolor .625 red;
+draw l withcolor .625 red;
+\stopreusableMPgraphic
+
+%% ColorDefinition
+%
+\definecolor[bordeauxred][c=.34, m=.92, y=.64, k=.34]
+\definecolor[darkblue][c=1,m=.99,y=0,k=.32]
+\definecolor[TEone][c=0,m=.75,y=.51,k=.7]
+\definecolor[TEtwo][c=0,m=.19,y=.96,k=.81]
+\definecolor[TEthree][c=0,m=0,y=0,k=.77]
+\definecolor[TEfive][c=.53,m=.97,y=0,k=.62]
+
+%% Coverpage Setup
+%
+\setupMPvariables[cover-front][logo=\getvariable{document}{logo},
+	xscale=\getvariable{document}{xscale},
+	yscale=\getvariable{document}{yscale}]
+\setMPtext{title}{\color[TEthree] \getvariable{document}{title}}
+\setMPtext{author}{\color[TEthree] \getvariable{document}{author}}
+
+\startuseMPgraphic{cover-front}
+	StartPage ;
+		color bordeauxred ; bordeauxred := cmyk (0.34,0.92,0.64,0.34) ;
+		color darkblue; darkblue := cmyk(1,0.99,0,0.32) ;
+		color BGone; BGone := cmyk(.05,0,.42,.33) ;
+		color FGone; FGone := cmyk(.02,0,.29,.76) ;
+		color TEone; TEone := cmyk(0,.75,.51,.7) ;
+		color BGtwo; BGtwo := cmyk(.13,0,.36,.13) ;
+		color FGtwo; FGtwo := cmyk(.26,0,.48,.44) ;
+		color TEtwo; TEtwo := cmyk(0,.19,.96,.81) ;
+		color BGthree; BGthree := cmyk(.39,.34,0,.09) ;
+		color FGthree; FGthree := cmyk(.91,.81,0,.87) ;
+		color TEthree; TEthree := cmyk(0,0,0,.77) ;
+		color BGfive; BGfive := cmyk(.11,0,.2,.01) ;
+		color FGfive; FGfive := cmyk(.53,.97,0,.62) ;
+		color TEfive; TEfive := cmyk(.53,.97,0,.62) ;
+		fill Page withcolor BGthree ;
+		z1 = (0cm, 7.0112cm) ;
+		z2 = (21cm, 7.0112cm) ;
+		z3 = (21cm,11.3444cm) ;
+		z4 = (0cm,11.3444cm) ;
+		path p ; p := z1--z2--z3--z4--cycle ;
+		filldraw p withcolor FGthree ;
+		externalfigure "logo/frog-and-owl.pdf" xscaled 4.1868cm yscaled 3cm shifted (16cm,1cm) ;
+		a := (10.5cm-\MPvar{xscale}/2) ;
+		%externalfigure "logo/sage-logo.pdf" xscaled \MPvar{xscale} yscaled \MPvar{yscale} shifted (a,20cm) ;
+		externalfigure \MPvar{logo} xscaled \MPvar{xscale} yscaled \MPvar{yscale} shifted (a,20cm) ;
+		z5 = 0.5[llcorner bbox currentpicture,urcorner bbox currentpicture] ;
+        z6 = 0.5[z2,z3] ;
+		label(\MPbetex{title} scaled 4,(x5,15cm) ) ;
+		label(\MPbetex{author} scaled 3,(x5,13cm) ) ;
+	StopPage;
+\stopuseMPgraphic
+
+\startuseMPgraphic{cover-back}
+    StartPage ;
+        color bordeauxred ; bordeauxred := cmyk (0.34,0.92,0.64,0.34) ;
+        color darkblue; darkblue := cmyk(1,0.99,0,0.32) ;
+		color BGone; BGone := cmyk(.05,0,.42,.33) ;
+		color FGone; FGone := cmyk(.02,0,.29,.76) ;
+		color TEone; TEone := cmyk(0,.75,.51,.7) ;
+		color BGtwo; BGtwo := cmyk(.13,0,.36,.13) ;
+		color FGtwo; FGtwo := cmyk(.26,0,.48,.44) ;
+		color TEtwo; TEtwo := cmyk(0,.19,.96,.81) ;
+		color BGthree; BGthree := cmyk(.39,.34,0,.09) ;
+		color FGthree; FGthree := cmyk(.91,.81,0,.87) ;
+		color TEthree; TEthree := cmyk(0,0,0,.77) ;
+		color BGfive; BGfive := cmyk(.11,0,.2,.01) ;
+		color FGfive; FGfive := cmyk(.53,.97,0,.62) ;
+		color TEfive; TEfive := cmyk(.53,.97,0,.62) ;
+        fill Page withcolor BGthree ;
+        z1 = (0cm, 7.0112cm) ;
+        z2 = (21cm, 7.0112cm) ;
+        z3 = (21cm,11.3444cm) ;
+        z4 = (0cm,11.3444cm) ;
+        path p ; p := z1--z2--z3--z4--cycle ;
+		filldraw p withcolor FGthree ;
+    StopPage;
+\stopuseMPgraphic
+
+\defineoverlay[cover-front][\useMPgraphic{cover-front}]
+\defineoverlay[cover-back][\useMPgraphic{cover-back}]
+
+\stopenvironment
