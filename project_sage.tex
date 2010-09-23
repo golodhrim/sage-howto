@@ -8,48 +8,24 @@
    logo="logo/sage-logo.pdf",
    xscale=5cm,
    yscale=5cm]
-%\setupMPvariables[cover-front][logo="logo/sage-logo.pdf",
-%	xscale=5cm,
-%	yscale=5cm]
-%\setupMPvariables[cover-front][logo=\getvariable{document}{logo},
-%	xscale=\getvariable{document}{xscale},
-%	yscale=\getvariable{document}{yscale}]
-%\setMPtext{title}{\color[TEthree] \getvariable{document}{title}}
-%\setMPtext{author}{\color[TEthree] \getvariable{document}{author}}
 
 \setupbackgrounds[page][background=cover-front]
 \starttext
 \setupbackgrounds[header][text][frame=none]
 \startstandardmakeup[align=top]
 \setuppagenumbering[state=stop]
-%\startcolor[bordeauxred]
-%\dontleavehmode
-%\blank[0cm]
-%\startalignment[center]
-%	\ssd Sage\par
-%	\ssd Howto set up a Server
-%\stopalignment
-%\stopcolor
-%\blank[10.9cm]
-%\startcolor[darkblue]
-%\startalignment[flushright]
-%\dontleavehmode
-%	\bTABLE
-%	\setupTABLE[r][each][frame=off]	
-%	\setupTABLE[c][1][align=left]
-%	\setupTABLE[c][2][align=right]
-%	\bTR \bTD Author: \eTD \bTD Martin Scholz \eTD \eTR
-%	\bTR \bTD Layout by: \eTD \bTD Scholz Online (\from[scholzonline]) \& \eTD \eTR
-%	\bTR \bTD  \eTD \bTD Frog and Owl (\from[frog-n-owl]) \eTD \eTR
-%	\bTR \bTD published on: \eTD \bTD \currentdate \eTD \eTR
-%	\eTABLE
-%\stopalignment
-%\stopcolor
-\page
+\stopstandardmakeup
+
+\setupbackgrounds[page][background=]
+\startstandardmakeup
+\page{}
 \stopstandardmakeup
 \startalignment[middle]
 This Document is set with \ConTeXt{}, using the MKIV branch\\
-Many thanks to Hans Hagen for developing so hard on \ConTeXt{} and \LuaTeX{} to providing such a great Document preparation system.
+Many thanks to Hans Hagen for developing so hard on \ConTeXt{} and \LuaTeX{} to providing such a great Document preparation system.\par
+\stopalignment
+\startalignment[flushleft]
+The Sage Logo is \copyright{} by \from[sage] and The Frog and Owl Logo is \copyright{} by \from[frog-n-owl].
 \stopalignment
 \stoptext
 \setupbackgrounds[page][background=]
@@ -68,9 +44,10 @@ Many thanks to Hans Hagen for developing so hard on \ConTeXt{} and \LuaTeX{} to 
 \stopbodymatter
 
 \startappendices
-\setuppagenumbering[state=start,conversion=]
-\completeindex
-\completepublications[criterium=all]
+\product prd_sage_app
+%\setuppagenumbering[state=start,conversion=]
+%\completeindex
+%\completepublications[criterium=all]
 \stopappendices
 \setupbackgrounds[header][text][frame=none]
 \char0

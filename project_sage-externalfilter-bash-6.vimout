@@ -1,0 +1,2 @@
+\NL{}\SYN[]{a2ensite sagenotebook}
+\NL{}\SYN[]{/etc/init.d/apache2 restart}

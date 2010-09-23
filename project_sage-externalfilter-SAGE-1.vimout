@@ -1,0 +1,35 @@
+\NL{}\SYN[Comment]{# A script for starting the Sage notebook with the options you like.}
+\NL{}\SYN[Comment]{# Change the options to your needs, save this script and do "sage}
+\NL{}\SYN[Comment]{# start_notebook.sage" to start the notebook with these options.}
+\NL{}\SYN[Comment]{#}
+\NL{}\SYN[Comment]{# by Dan Drake; see http://wiki.sagemath.org/DanDrake/JustEnoughSageServer}
+\NL{}
+\NL{}\SYN[Comment]{# we'll stuff everything into a dictionary and pass that on to notebook()}
+\NL{}\SYN[]{nbopts }\SYN[Statement]{=}\SYN[]{ }\SYN[Special]{\letteropenbrace{}\letterclosebrace{}}
+\NL{}
+\NL{}\SYN[Comment]{# listen on all addresses}
+\NL{}\SYN[]{nbopts}\SYN[Statement]{[}\SYN[Statement]{'}\SYN[Constant]{interface}\SYN[Statement]{'}\SYN[Statement]{]}\SYN[]{ }\SYN[Statement]{=}\SYN[]{ }\SYN[Statement]{''}
+\NL{}
+\NL{}\SYN[Comment]{# use https, not http}
+\NL{}\SYN[]{nbopts}\SYN[Statement]{[}\SYN[Statement]{'}\SYN[Constant]{secure}\SYN[Statement]{'}\SYN[Statement]{]}\SYN[]{ }\SYN[Statement]{=}\SYN[]{ False}
+\NL{}
+\NL{}\SYN[Comment]{# don't open a viewer, I'll do that myself thankyouverymuch}
+\NL{}\SYN[]{nbopts}\SYN[Statement]{[}\SYN[Statement]{'}\SYN[Constant]{open_viewer}\SYN[Statement]{'}\SYN[Statement]{]}\SYN[]{ }\SYN[Statement]{=}\SYN[]{ False}
+\NL{}
+\NL{}\SYN[Comment]{# use this directory for nb files; must be writable by the nb? users}
+\NL{}\SYN[]{nbopts}\SYN[Statement]{[}\SYN[Statement]{'}\SYN[Constant]{directory}\SYN[Statement]{'}\SYN[Statement]{]}\SYN[]{ }\SYN[Statement]{=}\SYN[]{ }\SYN[Statement]{'}\SYN[Constant]{/home/sageadm/nbfiles}\SYN[Statement]{'}
+\NL{}
+\NL{}\SYN[Comment]{# at most 500MB memory, 100MB files, 100 processes for nb? users}
+\NL{}\SYN[]{nbopts}\SYN[Statement]{[}\SYN[Statement]{'}\SYN[Constant]{ulimit}\SYN[Statement]{'}\SYN[Statement]{]}\SYN[]{ }\SYN[Statement]{=}\SYN[]{ }\SYN[Statement]{'}\SYN[Constant]{-v 500000 -f 100000 -u 100}\SYN[Statement]{'}
+\NL{}
+\NL{}\SYN[Comment]{# time out idle sessions after two hours}
+\NL{}\SYN[]{nbopts}\SYN[Statement]{[}\SYN[Statement]{'}\SYN[Constant]{timeout}\SYN[Statement]{'}\SYN[Statement]{]}\SYN[]{ }\SYN[Statement]{=}\SYN[]{ }\SYN[Constant]{7200}
+\NL{}
+\NL{}\SYN[Comment]{# yes, can create new accounts}
+\NL{}\SYN[]{nbopts}\SYN[Statement]{[}\SYN[Statement]{'}\SYN[Constant]{accounts}\SYN[Statement]{'}\SYN[Statement]{]}\SYN[]{ }\SYN[Statement]{=}\SYN[]{ True}
+\NL{}
+\NL{}\SYN[Comment]{# use these minions to do our bidding}
+\NL{}\SYN[]{nbopts}\SYN[Statement]{[}\SYN[Statement]{'}\SYN[Constant]{server_pool}\SYN[Statement]{'}\SYN[Statement]{]}\SYN[]{ }\SYN[Statement]{=}\SYN[]{ }\SYN[Statement]{[}\SYN[Statement]{'}\SYN[Constant]{nb%s@localhost}\SYN[Statement]{'}\SYN[shExpr]{ % n for n in }\SYN[Statement]{[}\SYN[Constant]{0}\SYN[shExpr]{..}\SYN[Constant]{20}\SYN[Statement]{]]}
+\NL{}
+\NL{}\SYN[Comment]{# Go!}
+\NL{}\SYN[]{notebook}\SYN[PreProc]{(}\SYN[Special]{**nbopts}\SYN[PreProc]{)}

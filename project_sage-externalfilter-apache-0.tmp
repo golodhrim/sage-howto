@@ -1,0 +1,20 @@
+NameVirtualHost Yourhost.no-ip.TLD:80
+
+<VirtualHost Yourhost.no-ip.TLD:80>
+
+	ServerName Yourhost.no-ip.org:80
+	PoxyRequests Off
+
+	<Proxy *>
+		Order deny,allow
+		Allow from all
+	</Proxy>
+
+	ProxyPass / http://localhost:8000/
+	ProxyPassReverse / http://localhost:8000/
+
+	<Location />
+		DefaultType text/html
+	</Location>
+
+</VirtualHost>

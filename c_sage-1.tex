@@ -1,0 +1,143 @@
+\startcomponent c_sage-1
+\product prd_sage
+\project project_sage
+
+\starttext
+\chapter[cha:server]{The Server Setup}
+
+Now we need to add some users to our system, here we should again have in mind how many simultaneous users we expect. Let us say for our howto here we expect 20 simultaneous users plus the educator, so create the users and a passwordless ssh key for granting the sageadm to login as one of our users. To do so execute the following commands:
+
+{\tfx
+\startbash
+su
+groupadd sageadm
+groupadd sageusers
+useradd -G sagusers,users sageadm
+for i in $(seq 0 20) ;
+  do useradd -G sageusers -m -s /bin/bash nb$i;
+  done
+su sageadm
+ssh-keygen -t dsa
+exit
+for i in $(seq 0 20);
+  do mkdir /home/nb$i/.ssh && \
+	  cp /home/sageadm/.ssh/id_dsa.pub /home/nb$i/.ssh/authorized_keys && \
+	  chown -R nb$i:nb$i /home/nb$i/.ssh ;
+  done
+su sageadm
+ssh nb0@localhost echo Done
+exit
+\stopbash
+}
+
+Now we created 22 users (sageadm, nb0 - nb20), a passwordless ssh keyfile for sageadm and granted sageadm the login without a password. That was the main work for creating the system specific needs of a sageserver. For the next step we change to our sageadm user again by executing {\em su sageadm} and create a file called {\sl start\_notebook.sage} with the following content:
+
+\startSAGE
+# A script for starting the Sage notebook with the options you like.
+# Change the options to your needs, save this script and do "sage
+# start_notebook.sage" to start the notebook with these options.
+#
+# by Dan Drake; see http://wiki.sagemath.org/DanDrake/JustEnoughSageServer
+
+# we'll stuff everything into a dictionary and pass that on to notebook()
+nbopts = {}
+
+# listen on all addresses
+nbopts['interface'] = ''
+
+# use https, not http
+nbopts['secure'] = False
+
+# don't open a viewer, I'll do that myself thankyouverymuch
+nbopts['open_viewer'] = False
+
+# use this directory for nb files; must be writable by the nb? users
+nbopts['directory'] = '/home/sageadm/nbfiles'
+
+# at most 500MB memory, 100MB files, 100 processes for nb? users
+nbopts['ulimit'] = '-v 500000 -f 100000 -u 100'
+
+# time out idle sessions after two hours
+nbopts['timeout'] = 7200
+
+# yes, can create new accounts
+nbopts['accounts'] = True
+
+# use these minions to do our bidding
+nbopts['server_pool'] = ['nb%s@localhost' % n for n in [0..20]]
+
+# Go!
+notebook(**nbopts)
+\stopSAGE
+
+if you created more or less users edit the server\_pool variable, the rest of the settings shouldn't be needed to change. Next is to create a nice alias to start our server nicely, unfortunately there isn't any startupscript for it now, hopefully there will be one someday.
+
+Open your {\em .bashrc} or {\em .zshrc} for the sageadm user and add the follwoing content to it:
+
+\startbash
+alias sagesrv="echo 'Sourcing the profile' && sleep 1 && \
+			   source /etc/zsh/zprofile && echo 'Starting Sage Webserver' && \
+			   sleep 1 && nohup sage start_notebook.sage & "
+\stopbash
+
+here you should replace the source command's path with the path to your profile-file and the Command should work like that, if you experience any problems, delete the \textbackslash and write the command in one line.
+
+after sourching now our profile-file we are able to start the sageserver as user sageadm, you need to start the server manually after every restart/reboot of your Sage Server. after executing
+
+\startbash
+sagesrv
+exit
+\stopbash
+
+you are able to access your Sage Server already under {\em http://hostname:8000}, but that looks not really nice, and for an access from the outer world it is not the wished way. So we first go to \from[noip] and create a free account for our Sage Server. The no-ip.com-client is included in the most distributions, install it with your package manager and configure it, or feel free to use any other DynDNS service.
+
+Now we need to have an Apache2 server installed, install it with you prefered package manager of your distribution and look for the {\em proxy} and {\em proxy\_http} modules support enabled for Apache2. For funtoo/gentoo just set these useflags and for Debian based systems execute:
+
+\startbash
+a2enmod proxy
+a2enmod proxy_http
+\stopbash
+
+Now create a file called {\em sageserver-vhost.conf} with the following content:
+
+\startapache
+NameVirtualHost Yourhost.no-ip.TLD:80
+
+<VirtualHost Yourhost.no-ip.TLD:80>
+	
+	ServerName Yourhost.no-ip.org:80
+	PoxyRequests Off
+
+	<Proxy *>
+		Order deny,allow
+		Allow from all
+	</Proxy>
+
+	ProxyPass / http://localhost:8000/
+	ProxyPassReverse / http://localhost:8000/
+
+	<Location />
+		DefaultType text/html
+	</Location>
+
+</VirtualHost>
+\stopapache
+
+and if you need to enable it do it. Under fundoo/gentoo this file is saved as {\em /etc/apache2/vhosts.d/10\_Yourhost.no-ip.TLD.conf} and under Debian based systems in {\em /etc/apache2/sites-available} and you need to make it available with
+
+\startbash
+a2ensite sagenotebook
+/etc/init.d/apache2 restart
+\stopbash
+
+For the final usage we just install some fonts for our Sage Server by executing
+
+\startbash
+sage -i jsmath_image_fonts-1.4.p3
+\stopbash
+
+and we are done.
+
+\stoptext
+
+\stopcomponent

@@ -1,0 +1,20 @@
+\NL{}\SYN[Identifier]{NameVirtualHost}\SYN[]{ Yourhost.no-ip.TLD:80}
+\NL{}
+\NL{}\SYN[Statement]{<VirtualHost}\SYN[Constant]{ Yourhost.no-ip.TLD:80}\SYN[Statement]{>}
+\NL{}
+\NL{}\SYN[]{\tab{4}}\SYN[Identifier]{ServerName}\SYN[]{ Yourhost.no-ip.org:80}
+\NL{}\SYN[]{\tab{4}PoxyRequests }\SYN[Constant]{Off}
+\NL{}
+\NL{}\SYN[]{\tab{4}}\SYN[Statement]{<Proxy}\SYN[Constant]{ *}\SYN[Statement]{>}
+\NL{}\SYN[Special]{\tab{4}\tab{4}Order }\SYN[Constant]{deny}\SYN[Special]{,}\SYN[Constant]{allow}
+\NL{}\SYN[]{\tab{4}\tab{4}}\SYN[PreProc]{Allow from }\SYN[Identifier]{all}
+\NL{}\SYN[]{\tab{4}}\SYN[Statement]{</Proxy>}
+\NL{}
+\NL{}\SYN[]{\tab{4}}\SYN[Identifier]{ProxyPass}\SYN[]{ / http://localhost:8000/}
+\NL{}\SYN[]{\tab{4}}\SYN[Identifier]{ProxyPassReverse}\SYN[]{ / http://localhost:8000/}
+\NL{}
+\NL{}\SYN[]{\tab{4}}\SYN[Statement]{<Location}\SYN[Constant]{ /}\SYN[Statement]{>}
+\NL{}\SYN[]{\tab{4}\tab{4}}\SYN[Identifier]{DefaultType}\SYN[]{ text/html}
+\NL{}\SYN[]{\tab{4}}\SYN[Statement]{</Location>}
+\NL{}
+\NL{}\SYN[Statement]{</VirtualHost>}

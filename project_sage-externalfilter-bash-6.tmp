@@ -1,0 +1,2 @@
+a2ensite sagenotebook
+/etc/init.d/apache2 restart

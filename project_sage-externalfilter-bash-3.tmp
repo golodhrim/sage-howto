@@ -1,0 +1,3 @@
+alias sagesrv="echo 'Sourcing the profile' && sleep 1 && \
+			   source /etc/zsh/zprofile && echo 'Starting Sage Webserver' && \
+			   sleep 1 && nohup sage start_notebook.sage & "

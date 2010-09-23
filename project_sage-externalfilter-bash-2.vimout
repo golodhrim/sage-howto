@@ -1,0 +1,13 @@
+\NL{}\SYN[]{./sage}
+\NL{}\SYN[]{----------------------------------------------------------------------}
+\NL{}\SYN[]{| Sage Version }\SYN[Constant]{4}\SYN[]{.}\SYN[Constant]{5}\SYN[]{.}\SYN[Constant]{2}\SYN[]{, Release Date: }\SYN[Constant]{2010-08-05}\SYN[]{                       |}
+\NL{}\SYN[]{| Type notebook}\SYN[PreProc]{()}\SYN[]{ }\SYN[Statement]{for }\SYN[shFor]{the GUI, and license}\SYN[Statement]{()}\SYN[shFor]{ }\SYN[Statement]{for }\SYN[shFor]{information.        }\SYN[Statement]{|}
+\NL{}\SYN[shFor]{----------------------------------------------------------------------}
+\NL{}
+\NL{}\SYN[shFor]{Loading Sage library. Current Mercurial branch is: main}
+\NL{}\SYN[shFor]{-rwxr-xr}\SYN[Statement]{-x}\SYN[shFor]{  }\SYN[Constant]{1}\SYN[shFor]{ root root   }\SYN[Constant]{108}\SYN[shFor]{ Aug }\SYN[Constant]{21}\SYN[shFor]{ }\SYN[Constant]{19}\SYN[shFor]{:}\SYN[Constant]{15}\SYN[shFor]{ sage-push}
+\NL{}\SYN[shFor]{-rw}\SYN[Statement]{-r}\SYN[shFor]{-}\SYN[Statement]{-r}\SYN[shFor]{--  }\SYN[Constant]{1}\SYN[shFor]{ root root }\SYN[Constant]{34067}\SYN[shFor]{ Aug }\SYN[Constant]{21}\SYN[shFor]{ }\SYN[Constant]{21}\SYN[shFor]{:}\SYN[Constant]{41}\SYN[shFor]{ setup.py}
+\NL{}\SYN[shFor]{-rwxr-xr}\SYN[Statement]{-x}\SYN[shFor]{  }\SYN[Constant]{1}\SYN[shFor]{ root root   }\SYN[Constant]{883}\SYN[shFor]{ Aug }\SYN[Constant]{21}\SYN[shFor]{ }\SYN[Constant]{19}\SYN[shFor]{:}\SYN[Constant]{13}\SYN[shFor]{ spkg-delauto}
+\NL{}\SYN[shFor]{-rwxr-xr}\SYN[Statement]{-x}\SYN[shFor]{  }\SYN[Constant]{1}\SYN[shFor]{ root root  }\SYN[Constant]{1618}\SYN[shFor]{ Aug }\SYN[Constant]{21}\SYN[shFor]{ }\SYN[Constant]{19}\SYN[shFor]{:}\SYN[Constant]{14}\SYN[shFor]{ spkg-dist}
+\NL{}\SYN[shFor]{-rwxr-xr}\SYN[Statement]{-x}\SYN[shFor]{  }\SYN[Constant]{1}\SYN[shFor]{ root root  }\SYN[Constant]{3720}\SYN[shFor]{ Aug }\SYN[Constant]{21}\SYN[shFor]{ }\SYN[Constant]{19}\SYN[shFor]{:}\SYN[Constant]{15}\SYN[shFor]{ spkg-}\SYN[Statement]{install}
+\NL{}\SYN[shFor]{sage:}

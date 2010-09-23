@@ -1,0 +1,4 @@
+\NL{}\SYN[Statement]{cd}\SYN[]{ /opt}
+\NL{}\SYN[]{tar xfvz /path/.../to/sage-x.y.z.tar.gz}
+\NL{}\SYN[Statement]{mv}\SYN[]{ ./sage-x.y.z sage}
+\NL{}\SYN[Statement]{cd}\SYN[]{ sage}

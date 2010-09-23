@@ -1,0 +1,13 @@
+./sage
+----------------------------------------------------------------------
+| Sage Version 4.5.2, Release Date: 2010-08-05                       |
+| Type notebook() for the GUI, and license() for information.        |
+----------------------------------------------------------------------
+
+Loading Sage library. Current Mercurial branch is: main
+-rwxr-xr-x  1 root root   108 Aug 21 19:15 sage-push
+-rw-r--r--  1 root root 34067 Aug 21 21:41 setup.py
+-rwxr-xr-x  1 root root   883 Aug 21 19:13 spkg-delauto
+-rwxr-xr-x  1 root root  1618 Aug 21 19:14 spkg-dist
+-rwxr-xr-x  1 root root  3720 Aug 21 19:15 spkg-install
+sage:

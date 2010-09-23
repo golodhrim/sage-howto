@@ -1,0 +1,4 @@
+cd /opt
+tar xfvz /path/.../to/sage-x.y.z.tar.gz
+mv ./sage-x.y.z sage
+cd sage

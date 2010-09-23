@@ -16,14 +16,164 @@ Sage offers you two versions for installing it,
 \stopitemize
 If you need to install from Source you first should make sure that you have the software fullfilled the requirements listed in \in{Section}[sec:software].
 
-You should use the Source installation if you want to use Sage on older hardware, but be warned, a build from source on a two Intel Pentium III tandem system could up to 12 to 24 hours.
+You should use the Source installation if you want to use Sage on older hardware, but be warned, a build from source on a two Intel Pentium III tandem system could run from 12 up to 24 hours.
 
-If you 
+If you want to use the binary installation packages, you should have a modern Architecture as they need it. Unfortunately there is up to now no specification given. I only know it from personal experiences that you should have an architecture more modern than P III. If you wanna use that kind of architecture you need to take the time and compile the sources.
+
+First determine what CPU architecture you are running. You can search for it with the following commands.
+
+\startitemize[1]
+\item On a Linux System you should run:\par
+		\#{} uname -a\par
+		If the output contains a string like "x86\_64", you are have a 64bit architecture and should load the 64-bit version, if the output contains a string like "x86", "i686", "i486" or "i386" you should load the 32-bit version. If you are using a 32-bit System on a 64-bit CPU you have to load the 32-bit version. A sample output of {\em uname -a} should look like on a 64-bit system:\par
+		\${} uname -a\par
+		{\tfx Linux localhost 2.6.32-15-server \#1 SMP Mo Sep 13 22:17:05 UTC 2010 x86\_64 GNU/Linux}\par
+		and on a 32-bit system you should get something like:\par
+		\${} uname -a\par
+		{\tfx Linux localhost 2.6.32-15-686 \#1 SMP Mo Sep 13 22:30:54 UTC 2010 i686 GNU/Linux}
+\item On Solaris systems execute the following command:\par
+		\#{} isainfo -v\par
+		A sample output will look like:\par
+		\${} isainfo -v\par
+		64-bit sparcv9 applications\par
+        \char0 \hspace[ecm] \char0 asi\_blk\_init vis2 vis\par
+		32-bit sparc applications\par
+        \char0 \hspace[ecm] \char0 asi\_blk\_init vis2 vis v8plus div32 mul32
+\item We don't provide any builds for Windows. There are two solutions for you, you might find useful:
+		\startitemize[m]
+		\item You should use our VMware image and start it under your Windows installation in a virtual machine, but be warned, it would produce a heavy CPU load if you use it that way with multi calculations. Your Windows Host might get slow in responding.
+		\item You should feel free to make a separate partition on your harddisk and install Linux on it.
+		\stopitemize
+\item On Mac OS X you shouldn't have problems to use Sage. Sage is often tested on Mac OS X 10.5.x but should also run on Mac OS X 10.4.x and you should be able to run it without problems. The only thing you should know is your CPU type (weather it is an Intel or a PowerPC) and the architecture (if it is 32-bit or 64-bit). If you want to compile it yourself on a Mac OS X please make sure you have all the needed build-tools (see \in{Section}[sec:software]) including {\em Xcode}.
+\stopitemize
+
+\section[sec:binary-inst]{Installing the binary version}
+
+Sage provides at the moment prebuilded packages for Ubuntu, Mandriva, OpenSUSE, fedora and Debian. The installation of these packages is pretty simple, first load it from \from[sage-dl] and extract the received {\sl .tar.lzma}-file.\par
+\${} tar -\,{}-lzma -xfv sage-*.tar.lzma\par
+We recommend to load these lzma compressed archives, as they save you about 150MB of space for loading.
+
+That was all you will receive a folder called {\sl sage-x.y.z}. As you want to run a server we recommend to move that file to {\em /opt/sage} by executing\par
+\#{} mv ./sage-x.y.z /opt/sage
+
+After adding {\em /opt/sage} to your path and installing \LaTeX{} with the packagemanager of your distribution, we have finished the binary installation. Unfortunately there are now distribution specific installations right now.
 
 \section[sec:software]{Software for installing form Source}
 
+If you are in the situation that the above installation failed in so far that you can't produce any graphics or sage isn't startable you need to do a source install. For a source installation you need to have the following tools installed
+
+\startitemize[1]
+\item gcc
+\item g++
+\item gfortran
+\item make
+\item m4
+\item perl
+\item ranlib
+\item tar
+\item readline and its development headers
+\item ssh-keygen -- needed to run the notebook in secure mode.
+\item latex -- highly recommended, though not strictly required
+\stopitemize
+
+As the installation differs from distribution to distribution, you should consult your distribution specific documentation project for help.
+
 \section[sec:hardware]{Hardware}
 
+As Sage uses your CPU, RAM and Harddrive-space for calculating and saving you should at least have these requirements for running sage.
+
+The used CPU is nearly not restricted, you should only keep in mind that the more users use your server setup simultanously you would have a lack of speed. So it would be a good starting point to have at least an Intel Pentium P III but a higher one would be much better.
+
+The minimum amount of harddrive space you need to 2 GB, but that is the minimum requirement if you use a binary installation, for a source based installation I would recommend to have 4 GB or more. As we would like to do a Server setup, I would be nice to have at least 4 GB for the binary installation and 6 GB for the source based.
+
+The RAM depends on the expected amount of simultaneously users on the Sage Server. The following \in{table}[tab:ram-user] will give you an overview of the amount of simultaneous users and RAM.
+
+\placetable[here][tab:ram-user]{Ram to Simultaneous Users}{
+\setupTABLE[r][each][frame=off]
+\setupTABLE[c][each][align=left]
+\setupTABLE[r][first][topframe=on]
+\setupTABLE[r][first,last][bottomframe=on]
+\bTABLE
+\bTABLEhead
+\bTR
+  \bTH  RAM (GB) \eTH
+  \bTH  Simultaneous Users \eTH
+\eTR
+\eTABLEhead
+
+\bTABLEbody
+\bTR
+  \bTD 1 \eTD
+  \bTD 5 \eTD
+\eTR
+\bTR
+  \bTD 2 \eTD
+  \bTD 20 \eTD
+\eTR
+\bTR
+  \bTD 3 \eTD
+  \bTD 40 \eTD
+\eTR
+\bTR
+  \bTD 4 \eTD
+  \bTD 60 \eTD
+\eTR
+\bTR
+  \bTD 8 \eTD
+  \bTD 140 \eTD
+\eTR
+\bTR
+  \bTD 12 \eTD
+  \bTD 200 \eTD
+\eTR
+\eTABLEbody
+\eTABLE
+}
+
+For the source based installation go to \from[sage-dl] and select the Source download. Now get a nice cup of tea and have a bit of time, as you will load about 290 MB to your PC. When it is finished I recommend again to get the installation based in {\em /opt/sage}.
+
+\startbash
+cd /opt
+tar xfvz /path/.../to/sage-x.y.z.tar.gz
+mv ./sage-x.y.z sage
+cd sage
+\stopbash
+
+Now we like to give you the advice to take a look into the {\em README.txt} file, but it is not necesary for finishing the rest of our installation. If you read the README or decided to skip it execute
+
+\startbash
+make
+\stopbash
+
+Now you get up and get yourself the ingredients for a cake, prepare it, eat a piece of it with a cup of tea, as the compilation would take a lot of time. As said by the readme it could take about an hour up to two weeks depending on the device you use to compile it on.
+
+now that we like to use Sage in a multiuser-way we should start sage and make symlinks for executing it.
+
+\startbash
+./sage
+----------------------------------------------------------------------
+| Sage Version 4.5.2, Release Date: 2010-08-05                       |
+| Type notebook() for the GUI, and license() for information.        |
+----------------------------------------------------------------------
+       
+Loading Sage library. Current Mercurial branch is: main
+-rwxr-xr-x  1 root root   108 Aug 21 19:15 sage-push
+-rw-r--r--  1 root root 34067 Aug 21 21:41 setup.py
+-rwxr-xr-x  1 root root   883 Aug 21 19:13 spkg-delauto
+-rwxr-xr-x  1 root root  1618 Aug 21 19:14 spkg-dist
+-rwxr-xr-x  1 root root  3720 Aug 21 19:15 spkg-install
+sage: 
+\stopbash
+
+now type in the sage input command the following
+
+\startSAGE
+install_scripts("/usr/local/bin/")
+\stopSAGE
+
+here you should change {\em /usr/local/bin} to the path where you want to have Sage symlinked to, but that path should be all right.
+
+Now we have all prerequierments fullfilled and could now move over to setup our server.
 
 \stoptext
 

@@ -1,0 +1,3 @@
+\NL{}\SYN[Identifier]{alias}\SYN[]{ sagesrv=}\SYN[Constant]{"echo 'Sourcing the profile' && sleep 1 && \letterbackslash{}}
+\NL{}\SYN[Constant]{\tab{4}\tab{4}\tab{4}   source /etc/zsh/zprofile && echo 'Starting Sage Webserver' && \letterbackslash{}}
+\NL{}\SYN[Constant]{\tab{4}\tab{4}\tab{4}   sleep 1 && nohup sage start_notebook.sage & "}
