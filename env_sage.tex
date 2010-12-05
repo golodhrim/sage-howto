@@ -63,7 +63,7 @@
 \setupbackgrounds[header][text][frame=off,bottomframe=on]
 \setuptolerance[{horizontal, verytolerant},{vertical, verystrict}]
 \clubpenalty=8000		% no clubs / keine Schusterjungen
-\widowpenalty=8000		% no wi\colordows / keine Hurenkinder
+\widowpenalty=8000		% no widows / keine Hurenkinder
 \tolerance=1750		% line breaking tolerance (ca. 500--3000)
 \emergencystretch=10 pt	% additional stretching space per line
 \setupwhitespace[medium]
@@ -182,6 +182,7 @@
 \definevimtyping[SAGE][syntax=python,alternative=pscolor]
 \definevimtyping[bash][syntax=sh,alternative=pscolor]
 \definevimtyping[apache][syntax=apache,alternative=pscolor]
+\definevimtyping[runscript][syntax=sh,alternative=pscolor]
 
 %% Mathematische Mengen
 %
@@ -292,7 +293,6 @@ draw l withcolor .625 red;
 		filldraw p withcolor FGthree ;
 		externalfigure "logo/frog-and-owl.pdf" xscaled 4.1868cm yscaled 3cm shifted (16cm,1cm) ;
 		a := (10.5cm-\MPvar{xscale}/2) ;
-		%externalfigure "logo/sage-logo.pdf" xscaled \MPvar{xscale} yscaled \MPvar{yscale} shifted (a,20cm) ;
 		externalfigure \MPvar{logo} xscaled \MPvar{xscale} yscaled \MPvar{yscale} shifted (a,20cm) ;
 		z5 = 0.5[llcorner bbox currentpicture,urcorner bbox currentpicture] ;
         z6 = 0.5[z2,z3] ;

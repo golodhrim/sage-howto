@@ -138,6 +138,84 @@ sage -i jsmath_image_fonts-1.4.p3
 
 and we are done.
 
+Ath the end wou could only add a little improvement, if we did all like the above, we see that it is hard to start the sage-server here is a little improvement if you are able to run start-stop-runscripts...
+
+Just save the following runscript under {\em /etc/init.d/sage-notebook-server}:
+
+\startrunscript
+#!/sbin/runscript
+
+extra_commands="setup"
+description_reset=""
+
+depend() {
+        need net
+}
+
+start() {
+        if [ ! -e ~sageadm/.sage/sage_notebook.sagenb/users.pickle ]; then
+                eerror "Sage's Notebook was not properly set up. Run setup first."
+                return 1
+        fi
+
+        ebegin "Starting Sage's Notebook server"
+        start-stop-daemon \
+                --start \
+                --background \
+                --stdout ~sageadm/.sagelog/sagenb.log \
+                --stderr ~sageadm/.sagelog/sagenb.err \
+                --pidfile ~sageadm/.sagelog/sagenb.pid \
+                --user sageadm \
+                --exec /usr/local/bin/sage \
+                -- -notebook \
+                interface=${interface-''} \
+                secure=${secure-False} \
+                open_viewer=False \
+                directory='/home/sageadm/nbfiles' \
+                ulimit='-v 500000 -f 100000 -u 100' \
+                timeout=${timout-0} \
+                accounts=${accounts-True} \
+                server_pool=['nb%s@localhost' % n for n in [0..20]]
+        eend $? "Failed to start Sage's Notebook server"
+}
+
+stop() {
+        ebegin "Stopping Sage's Notebook server"
+        start-stop-daemon --stop --pidfile ~sageadm/.sagelog/sagenb.pid --user sageadm
+        eend $? "Failed to stop Sage's Notebook server"
+}
+\stoprunscript
+
+make it executable by running
+
+\startbash
+chmod 744 /etc/init.d/sage-notebook-server
+\stopbash
+
+then run the following:
+
+\startbash
+/etc/init.d/sage-notebook-server setup
+\stopbash
+
+and execute in SAGE the following
+
+\startSAGE
+notebook()
+\stopSAGE
+
+it will now creat some directorys for you and ask for an admin password, remember it good and quit thesetup environment. Now just create one directory {\em .sagelog} in the homedir of {\em sageadm} and that is it... you are ready to use the notebook server as a runlevelscript. Under funtoo you can do so with the following procedure that also adds the notebook-server to the default-runlevel under funtoo/gentoo:
+
+\startbash
+su sageadm
+mkdir ~/.sagelog
+exit
+rc-update add sage-notebook-server default
+/etc/init.d/sage-notebook-server start
+\stopbash
+
+and it should all be set up and working now.
+
 \stoptext
 
 \stopcomponent
