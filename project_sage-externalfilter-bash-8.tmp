@@ -1,0 +1,1 @@
+chmod 744 /etc/init.d/sage-notebook-server

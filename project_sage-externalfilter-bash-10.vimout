@@ -1,0 +1,5 @@
+\NL{}\SYN[]{su sageadm}
+\NL{}\SYN[Statement]{mkdir}\SYN[]{ ~/.sagelog}
+\NL{}\SYN[Statement]{exit}
+\NL{}\SYN[]{rc-update add sage-notebook-server default}
+\NL{}\SYN[]{/etc/init.d/sage-notebook-server start}

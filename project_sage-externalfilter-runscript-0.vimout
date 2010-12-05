@@ -1,0 +1,41 @@
+\NL{}\SYN[Comment]{#!/sbin/runscript}
+\NL{}
+\NL{}\SYN[Identifier]{extra_commands}\SYN[shSetIdentifier]{=}\SYN[Statement]{"}\SYN[Constant]{setup}\SYN[Statement]{"}
+\NL{}\SYN[Identifier]{description_reset}\SYN[shSetIdentifier]{=}\SYN[Statement]{""}
+\NL{}
+\NL{}\SYN[Identifier]{depend() \letteropenbrace{}}
+\NL{}\SYN[shFunctionOne]{        need net}
+\NL{}\SYN[Identifier]{\letterclosebrace{}}
+\NL{}
+\NL{}\SYN[Identifier]{start() \letteropenbrace{}}
+\NL{}\SYN[shFunctionOne]{        }\SYN[Statement]{if }\SYN[Statement]{[}\SYN[shExpr]{ }\SYN[Statement]{!}\SYN[shExpr]{ }\SYN[Statement]{-e}\SYN[shExpr]{ ~sageadm/.sage/sage_notebook.sagenb/users.pickle }\SYN[Statement]{]}\SYN[Statement]{;}\SYN[shFunctionOne]{ }\SYN[Statement]{then}
+\NL{}\SYN[shFunctionOne]{                eerror }\SYN[Statement]{"}\SYN[Constant]{Sage's Notebook was not properly set up. Run setup first.}\SYN[Statement]{"}
+\NL{}\SYN[shFunctionOne]{                }\SYN[Statement]{return}\SYN[shFunctionOne]{ }\SYN[Constant]{1}
+\NL{}\SYN[shFunctionOne]{        }\SYN[Statement]{fi}
+\NL{}
+\NL{}\SYN[shFunctionOne]{        ebegin }\SYN[Statement]{"}\SYN[Constant]{Starting Sage's Notebook server}\SYN[Statement]{"}
+\NL{}\SYN[shFunctionOne]{        start-stop-daemon \letterbackslash{}}
+\NL{}\SYN[shFunctionOne]{                }\SYN[Special]{--start}\SYN[shFunctionOne]{ \letterbackslash{}}
+\NL{}\SYN[shFunctionOne]{                }\SYN[Special]{--background}\SYN[shFunctionOne]{ \letterbackslash{}}
+\NL{}\SYN[shFunctionOne]{                }\SYN[Special]{--stdout}\SYN[shFunctionOne]{ ~sageadm/.sagelog/sagenb.log \letterbackslash{}}
+\NL{}\SYN[shFunctionOne]{                }\SYN[Special]{--stderr}\SYN[shFunctionOne]{ ~sageadm/.sagelog/sagenb.err \letterbackslash{}}
+\NL{}\SYN[shFunctionOne]{                }\SYN[Special]{--pidfile}\SYN[shFunctionOne]{ ~sageadm/.sagelog/sagenb.pid \letterbackslash{}}
+\NL{}\SYN[shFunctionOne]{                }\SYN[Special]{--user}\SYN[shFunctionOne]{ sageadm \letterbackslash{}}
+\NL{}\SYN[shFunctionOne]{                }\SYN[Special]{--exec}\SYN[shFunctionOne]{ /usr/local/bin/sage \letterbackslash{}}
+\NL{}\SYN[shFunctionOne]{                -- }\SYN[Special]{-notebook}\SYN[shFunctionOne]{ \letterbackslash{}}
+\NL{}\SYN[shFunctionOne]{                }\SYN[Identifier]{interface}\SYN[shSetIdentifier]{=}\SYN[PreProc]{$\letteropenbrace{}}\SYN[PreProc]{interface}\SYN[Statement]{-}\SYN[Statement]{''}\SYN[PreProc]{\letterclosebrace{}}\SYN[shFunctionOne]{ \letterbackslash{}}
+\NL{}\SYN[shFunctionOne]{                }\SYN[Identifier]{secure}\SYN[shSetIdentifier]{=}\SYN[PreProc]{$\letteropenbrace{}}\SYN[PreProc]{secure}\SYN[Statement]{-}\SYN[Error]{False}\SYN[PreProc]{\letterclosebrace{}}\SYN[shFunctionOne]{ \letterbackslash{}}
+\NL{}\SYN[shFunctionOne]{                }\SYN[Identifier]{open_viewer}\SYN[shSetIdentifier]{=}\SYN[shFunctionOne]{False \letterbackslash{}}
+\NL{}\SYN[shFunctionOne]{                }\SYN[Identifier]{directory}\SYN[shSetIdentifier]{=}\SYN[Statement]{'}\SYN[Constant]{/home/sageadm/nbfiles}\SYN[Statement]{'}\SYN[shFunctionOne]{ \letterbackslash{}}
+\NL{}\SYN[shFunctionOne]{                }\SYN[Statement]{ulimit}\SYN[Statement]{=}\SYN[Statement]{'}\SYN[Constant]{-v 500000 -f 100000 -u 100}\SYN[Statement]{'}\SYN[shFunctionOne]{ \letterbackslash{}}
+\NL{}\SYN[shFunctionOne]{                }\SYN[Identifier]{timeout}\SYN[shSetIdentifier]{=}\SYN[PreProc]{$\letteropenbrace{}}\SYN[PreProc]{timout}\SYN[Statement]{-}\SYN[Error]{0}\SYN[PreProc]{\letterclosebrace{}}\SYN[shFunctionOne]{ \letterbackslash{}}
+\NL{}\SYN[shFunctionOne]{                }\SYN[Identifier]{accounts}\SYN[shSetIdentifier]{=}\SYN[PreProc]{$\letteropenbrace{}}\SYN[PreProc]{accounts}\SYN[Statement]{-}\SYN[Error]{True}\SYN[PreProc]{\letterclosebrace{}}\SYN[shFunctionOne]{ \letterbackslash{}}
+\NL{}\SYN[shFunctionOne]{                }\SYN[Identifier]{server_pool}\SYN[shSetIdentifier]{=}\SYN[Statement]{[}\SYN[Statement]{'}\SYN[Constant]{nb%s@localhost}\SYN[Statement]{'}\SYN[shExpr]{ % n for n in }\SYN[Statement]{[}\SYN[Constant]{0}\SYN[shExpr]{..}\SYN[Constant]{20}\SYN[Statement]{]]}
+\NL{}\SYN[shFunctionOne]{        eend }\SYN[PreProc]{$?}\SYN[shFunctionOne]{ }\SYN[Statement]{"}\SYN[Constant]{Failed to start Sage's Notebook server}\SYN[Statement]{"}
+\NL{}\SYN[Identifier]{\letterclosebrace{}}
+\NL{}
+\NL{}\SYN[Identifier]{stop() \letteropenbrace{}}
+\NL{}\SYN[shFunctionOne]{        ebegin }\SYN[Statement]{"}\SYN[Constant]{Stopping Sage's Notebook server}\SYN[Statement]{"}
+\NL{}\SYN[shFunctionOne]{        start-stop-daemon }\SYN[Special]{--stop}\SYN[shFunctionOne]{ }\SYN[Special]{--pidfile}\SYN[shFunctionOne]{ ~sageadm/.sagelog/sagenb.pid }\SYN[Special]{--user}\SYN[shFunctionOne]{ sageadm}
+\NL{}\SYN[shFunctionOne]{        eend }\SYN[PreProc]{$?}\SYN[shFunctionOne]{ }\SYN[Statement]{"}\SYN[Constant]{Failed to stop Sage's Notebook server}\SYN[Statement]{"}
+\NL{}\SYN[Identifier]{\letterclosebrace{}}

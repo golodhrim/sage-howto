@@ -1,0 +1,41 @@
+#!/sbin/runscript
+
+extra_commands="setup"
+description_reset=""
+
+depend() {
+        need net
+}
+
+start() {
+        if [ ! -e ~sageadm/.sage/sage_notebook.sagenb/users.pickle ]; then
+                eerror "Sage's Notebook was not properly set up. Run setup first."
+                return 1
+        fi
+
+        ebegin "Starting Sage's Notebook server"
+        start-stop-daemon \
+                --start \
+                --background \
+                --stdout ~sageadm/.sagelog/sagenb.log \
+                --stderr ~sageadm/.sagelog/sagenb.err \
+                --pidfile ~sageadm/.sagelog/sagenb.pid \
+                --user sageadm \
+                --exec /usr/local/bin/sage \
+                -- -notebook \
+                interface=${interface-''} \
+                secure=${secure-False} \
+                open_viewer=False \
+                directory='/home/sageadm/nbfiles' \
+                ulimit='-v 500000 -f 100000 -u 100' \
+                timeout=${timout-0} \
+                accounts=${accounts-True} \
+                server_pool=['nb%s@localhost' % n for n in [0..20]]
+        eend $? "Failed to start Sage's Notebook server"
+}
+
+stop() {
+        ebegin "Stopping Sage's Notebook server"
+        start-stop-daemon --stop --pidfile ~sageadm/.sagelog/sagenb.pid --user sageadm
+        eend $? "Failed to stop Sage's Notebook server"
+}

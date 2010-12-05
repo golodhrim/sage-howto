@@ -1,0 +1,5 @@
+su sageadm
+mkdir ~/.sagelog
+exit
+rc-update add sage-notebook-server default
+/etc/init.d/sage-notebook-server start

@@ -1,7 +1,7 @@
 -- version: 1.14
 -- file: project_sage
 -- format: cont-en
--- stamp: 2010.09.16 10:46
+-- stamp: 2010.11.18 19:47
 -- escape: [===[ ... ]===]
 
 job = job or { }
@@ -103,7 +103,7 @@ structures.counters.collected={
   { 0, 0, 0, 0 },
  },
  realpage={
-  { 0, 24 },
+  { 0, 26 },
  },
  satz={
   { 0, 0, 0, 0 },
@@ -118,7 +118,7 @@ structures.counters.collected={
   { 0, 0, 0, 0 },
  },
  userpage={
-  { 0, 2, 2, 16 },
+  { 0, 2, 2, 18 },
  },
  vignette={
   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
@@ -255,7 +255,7 @@ structures.lists.collected={
   references={
    block="appendix",
    internal=9,
-   realpage=21,
+   realpage=23,
    reference="cha:why",
    section=7,
   },
@@ -390,13 +390,13 @@ structures.pages.collected={
   prefixdata=24,
  },
  {
-  block="appendix",
+  block="bodypart",
   number=13,
   numberdata=23,
   prefixdata=24,
  },
  {
-  block="appendix",
+  block="bodypart",
   number=14,
   numberdata=23,
   prefixdata=24,
@@ -413,11 +413,36 @@ structures.pages.collected={
   numberdata=23,
   prefixdata=24,
  },
+ {
+  block="appendix",
+  number=17,
+  numberdata=23,
+  prefixdata=24,
+ },
+ {
+  block="appendix",
+  number=18,
+  numberdata=23,
+  prefixdata=24,
+ },
 }
 structures = structures or { }
 structures.references = structures.references or { }
 structures.references.collected = structures.references.collected or { }
 structures.references.collected={
+}
+structures = structures or { }
+structures.references = structures.references or { }
+structures.references.referred = structures.references.referred or { }
+structures.references.referred={
+ 5,
+ [3]=7,
+ [10]=9,
+ [13]=11,
+ [15]=12,
+ [18]=13,
+ [20]=19,
+ [21]=23,
 }
 structures = structures or { }
 structures.registers = structures.registers or { }
@@ -1207,7 +1232,7 @@ structures.synonyms.collected={
    },
    {
     definition={
-     meaning="Bit",
+     meaning="\\labeltext {u:bit}",
      synonym="bit",
      tag="Bit",
      used=false,
@@ -1225,7 +1250,7 @@ structures.synonyms.collected={
    },
    {
     definition={
-     meaning="Byte",
+     meaning="\\labeltext {u:byte}",
      synonym="B",
      tag="Byte",
      used=false,
@@ -1264,6 +1289,15 @@ structures.synonyms.collected={
      meaning="tera Byte",
      synonym="\\Tera \\Byte ",
      tag="TByte",
+     used=false,
+    },
+    metadata=26,
+   },
+   {
+    definition={
+     meaning="Erlang",
+     synonym="E",
+     tag="Erlang",
      used=false,
     },
     metadata=26,
@@ -1378,7 +1412,7 @@ structures.synonyms.collected={
    },
    {
     definition={
-     meaning="inch",
+     meaning="\\labeltext {u:inch}",
      synonym="inch",
      tag="Inch",
      used=false,
